@@ -85,7 +85,7 @@ GameObject:
   - 33: {fileID: 330532238}
   - 23: {fileID: 330532236}
   - 61: {fileID: 330532237}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,6 +294,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1063359186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1063359187}
+  m_Layer: 0
+  m_Name: groundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1063359187
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1063359186}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .00700000022, y: -.0851999968, z: -6.1500001}
+  m_LocalScale: {x: .100000001, y: .100000001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1535754105}
+  m_RootOrder: 1
 --- !u!1 &1211485693
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +413,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1325814291}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Level Structures
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,10 +483,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1535754103}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.02999997, y: -3.70000005, z: 0}
+  m_LocalPosition: {x: -1.02999997, y: -2.9749999, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 2005645658}
+  - {fileID: 1063359187}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!50 &1535754106
@@ -471,7 +499,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 2
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -499,8 +527,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93631b49ee04c462f9daa5c660b9e7b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  maxSpeed: 15
+  speed: 25
+  maxSpeed: 25
+  layer:
+    serializedVersion: 2
+    m_Bits: 256
+  groundCheck: {fileID: 1063359187}
 --- !u!1 &1538172123
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +544,7 @@ GameObject:
   - 33: {fileID: 1538172126}
   - 23: {fileID: 1538172125}
   - 61: {fileID: 1538172124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +612,7 @@ GameObject:
   - 33: {fileID: 1884593023}
   - 23: {fileID: 1884593021}
   - 61: {fileID: 1884593022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}

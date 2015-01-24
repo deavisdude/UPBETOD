@@ -1,19 +1,11 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 5b8f31435b916d04292611b7a898e20f
-=======
-guid: e49ea3480a926344ea3da59ee90f969b
->>>>>>> 9436c96d758dcc1d1f22b9affccc0ee640a33a97
+guid: cd29cf63905586a45bd72d8ae201397f
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-<<<<<<< HEAD
     enableMipMap: 1
-=======
-    enableMipMap: 0
->>>>>>> 9436c96d758dcc1d1f22b9affccc0ee640a33a97
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -33,26 +25,17 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: -1
     mipBias: -1
-<<<<<<< HEAD
     wrapMode: -1
-=======
-    wrapMode: 1
->>>>>>> 9436c96d758dcc1d1f22b9affccc0ee640a33a97
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-<<<<<<< HEAD
-  alignment: 9
-  spritePivot: {x: .75, y: .5}
-=======
   alignment: 0
   spritePivot: {x: .5, y: .5}
->>>>>>> 9436c96d758dcc1d1f22b9affccc0ee640a33a97
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1

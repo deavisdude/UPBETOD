@@ -29,4 +29,10 @@ obj/
 .Trashes
 ehthumbs.db
 Thumbs.db
-Assets/Photon Unity Networking/Demos/
+
+# ========= #
+# Our Stuff #
+# ========= #
+Plugins/
+Photon Unity Networking/Demos
+Photon Unity Networking/Editor

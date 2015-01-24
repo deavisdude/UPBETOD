@@ -264,24 +264,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: .800000012, y: .5, z: 1}
-        inSlope: {x: .123313725, y: .0770711303, z: .154142261}
-        outSlope: {x: .123313725, y: .0770711303, z: .154142261}
-        tangentMode: 75
+        value: {x: 1.83039987, y: .519999981, z: 1.03999996}
+        inSlope: {x: -.0703998804, y: -.0199999809, z: -.0399999619}
+        outSlope: {x: -.0703998804, y: -.0199999809, z: -.0399999619}
+        tangentMode: 116510684
       - time: 1
-        value: {x: .923313737, y: .57707113, z: 1.15414226}
-        inSlope: {x: 1.02743506e-05, y: 0, z: 0}
-        outSlope: {x: 1.02743506e-05, y: 0, z: 0}
-        tangentMode: 100694113
-      - time: 2
-        value: {x: .800020576, y: .5, z: 1}
-        inSlope: {x: -.123334281, y: -.0770711303, z: -.154142261}
-        outSlope: {x: -.123334281, y: -.0770711303, z: -.154142261}
-        tangentMode: 0
-      - time: 2.00016665
-        value: {x: .800000012, y: .5, z: 1}
-        inSlope: {x: -.123293176, y: 0, z: 0}
-        outSlope: {x: -.123293176, y: 0, z: 0}
+        value: {x: 1.75999999, y: .5, z: 1}
+        inSlope: {x: -.0703998804, y: -.0199999809, z: -.0399999619}
+        outSlope: {x: -.0703998804, y: -.0199999809, z: -.0399999619}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -305,7 +295,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 2.00016665
+    m_StopTime: 1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -324,19 +314,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .800000012
-        inSlope: .123313725
-        outSlope: .123313725
+        value: 1.83039987
+        inSlope: -.0703998804
+        outSlope: -.0703998804
         tangentMode: 10
       - time: 1
-        value: .923313737
-        inSlope: 1.02743506e-05
-        outSlope: 1.02743506e-05
-        tangentMode: 10
-      - time: 2.00016665
-        value: .800000012
-        inSlope: -.123293176
-        outSlope: -.123293176
+        value: 1.75999999
+        inSlope: -.0703998804
+        outSlope: -.0703998804
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -348,19 +333,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .5
-        inSlope: .0770711303
-        outSlope: .0770711303
+        value: .519999981
+        inSlope: -.0199999809
+        outSlope: -.0199999809
         tangentMode: 10
       - time: 1
-        value: .57707113
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 2
         value: .5
-        inSlope: -.0770711303
-        outSlope: -.0770711303
+        inSlope: -.0199999809
+        outSlope: -.0199999809
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -372,19 +352,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1
-        inSlope: .154142261
-        outSlope: .154142261
+        value: 1.03999996
+        inSlope: -.0399999619
+        outSlope: -.0399999619
         tangentMode: 10
       - time: 1
-        value: 1.15414226
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 2
         value: 1
-        inSlope: -.154142261
-        outSlope: -.154142261
+        inSlope: -.0399999619
+        outSlope: -.0399999619
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -639,13 +614,6 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 0}
-      second:
-      - {fileID: 110133856}
-      - {fileID: 110133854}
-      - {fileID: 110133852}
-      - {fileID: 110133850}
-    data:
       first: {fileID: 110233850}
       second: []
     data:
@@ -657,6 +625,13 @@ StateMachine:
     data:
       first: {fileID: 110233856}
       second: []
+    data:
+      first: {fileID: 0}
+      second:
+      - {fileID: 110133856}
+      - {fileID: 110133854}
+      - {fileID: 110133852}
+      - {fileID: 110133850}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 48, y: 24, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

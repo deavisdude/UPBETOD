@@ -42,9 +42,11 @@ public class MovePlayer : MonoBehaviour {
 	}
 	void OnTriggerStay2D(Collider2D collider)
 	{
-		Debug.Log ("blah");
-		if (Input.GetKey (KeyCode.Space) && collider.tag == "BlackHole") {
+		Debug.Log (collider.tag);
+		if (Input.GetKey (KeyCode.Space) && collider.tag == "Blackhole") {
 			myBody.velocity = Vector2.zero;
+			Debug.Log ("blah");
+
 			currentHole = collider.transform;
 			myBody.Sleep (); 
 			Vector2 destination = new Vector2(collider.transform.position.x + Mathf.Cos(Time.time*rotateConstant),collider.transform.position.y + Mathf.Sin(Time.time*rotateConstant));

@@ -31,7 +31,7 @@ Material:
       data:
         first:
           name: _RefractiveIndex
-        second: 10
+        second: 5
     m_Colors:
       data:
         first:

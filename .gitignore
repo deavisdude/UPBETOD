@@ -30,7 +30,16 @@ obj/
 ehthumbs.db
 Thumbs.db
 
-# =========== #
-# Our Stuff   #
-# =========== #
-*.dll
+# ========= #
+# Our Stuff #
+# ========= #
+Plugins/
+Photon Unity Networking/Demos
+Photon Unity Networking/Editor
+SoundManagerPro/
+<<<<<<< HEAD
+Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll
+Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll.meta
+=======
+Assets/Photon Unity Networking/
+>>>>>>> f3f3a03bd221468ad8d27edb89a8781c5a5d1462

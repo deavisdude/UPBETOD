@@ -6,8 +6,10 @@ public class bulletScript : MonoBehaviour {
 	public static float blackHoleMod;
 	public float secondMod;
 	public int lifeTime;
+
 	// Use this for initialization
 	void Start () {
+		//audio.Play ();
 		if (name.Contains ("Cannon")) {
 						secondMod = 60;
 				} else {

@@ -39,6 +39,7 @@ public class MovePlayer : MonoBehaviour {
 								rigidbody2D.AddForce ((-transform.right * (-(-maxSpeed - rigidbody2D.velocity.x))) * Time.deltaTime * 60f);
 
 						if (Input.GetKeyDown (KeyCode.Space) && Physics2D.Linecast (transform.position, groundCheck.position, layer)) {
+			audio.Play();
 						rigidbody2D.AddForce (new Vector2 (0, speed), ForceMode2D.Impulse);
 			jump = true;
 				}
@@ -83,7 +84,6 @@ public class MovePlayer : MonoBehaviour {
 	}
 	void OnTriggerStay2D(Collider2D collider)
 	{
-						Debug.Log (collider.tag);
 
 						if (Input.GetKey (KeyCode.Space) && collider.tag == "Blackhole") {
 								myBody.velocity = Vector2.zero;

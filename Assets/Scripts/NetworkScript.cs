@@ -34,12 +34,9 @@ public class NetworkScript : Photon.MonoBehaviour {
 		if(PhotonNetwork.inRoom)
 		PhotonNetwork.Instantiate ("Character", transform.position, transform.rotation, 0);
 	}
-<<<<<<< HEAD
+
 	void OnGUI(){
-=======
-	void OnGUI()
-	{
->>>>>>> 8919ee70b137ee0aaefeeb1c46fd56de14ab7706
+
 		if(GUI.Button (new Rect (0,0,Screen.width*.25f,Screen.height*.1f),"Spawn"))
 		{
 			Debug.Log("clci");
@@ -49,8 +46,5 @@ public class NetworkScript : Photon.MonoBehaviour {
 		}
 
 	}
-<<<<<<< HEAD
 
-=======
->>>>>>> 8919ee70b137ee0aaefeeb1c46fd56de14ab7706
 }

@@ -36,7 +36,7 @@ public class bulletScript : MonoBehaviour {
 	{
 	
 		if (collider.tag == "Blackhole") {
-			blackHoleMod = (secondMod/(transform.position - collider.transform.position).sqrMagnitude);
+			blackHoleMod = (secondMod/(collider.transform.position-transform.position).sqrMagnitude);
 			//Debug.Log (blackHoleMod+"why");
 		
 			Vector3 shootDirection;

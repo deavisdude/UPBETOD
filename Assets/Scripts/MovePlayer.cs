@@ -14,8 +14,8 @@ public class MovePlayer : MonoBehaviour {
 	void Start(){
 		health = 1;
 		facingRight = true;
-		rotateConstant = 2f;
-		shootOutSpeed = 75f;
+		rotateConstant = 4.25f;
+		shootOutSpeed = 90f;
 		angle = 5f;
 		myBody = GetComponent<Rigidbody2D> ();
 	}

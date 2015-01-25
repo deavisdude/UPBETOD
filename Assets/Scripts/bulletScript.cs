@@ -5,8 +5,16 @@ public class bulletScript : MonoBehaviour {
 	public int myDamage;
 	public static float blackHoleMod;
 	public float secondMod;
+	public int lifeTime;
 	// Use this for initialization
 	void Start () {
+		if (name.Contains ("Cannon")) {
+						secondMod = 60;
+				} else {
+				
+			secondMod = 100f;
+		}
+		StartCoroutine (Decay ());
 		//secondMod = 2f;
 		myDamage = 5;
 	}
@@ -28,8 +36,20 @@ public class bulletScript : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.gameObject.tag == "Player") {
-			collision.gameObject.GetComponent<MovePlayer>().Damage(myDamage,rigidbody2D.velocity);	
+						collision.gameObject.GetComponent<MovePlayer> ().Damage (myDamage, rigidbody2D.velocity);	
 		
+				}
+		if (collision.gameObject.tag == "Floor") {
+			Destroy(gameObject);		
+		}
+	}
+	IEnumerator Decay()
+	{
+		while (true) {
+			lifeTime++;
+			if(lifeTime >= 5)
+				Destroy(gameObject);
+			yield return new WaitForSeconds (1f);		
 		}
 	}
 	void OnTriggerStay2D(Collider2D collider)
@@ -54,7 +74,6 @@ public class bulletScript : MonoBehaviour {
 			
 			float rot_z = Mathf.Atan2 (shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
 			//transform.rotation = Quaternion.Euler (0f, 0f, rot_z);
-			Debug.Log("kasjh");
 			shootDirection.Normalize();
 			rigidbody2D.AddForce(shootDirection*blackHoleMod, ForceMode2D.Impulse);
 		}

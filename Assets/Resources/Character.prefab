@@ -32,6 +32,7 @@ GameObject:
   - 50: {fileID: 5037366}
   - 114: {fileID: 11437362}
   - 233: {fileID: 23381580}
+  - 114: {fileID: 11461190}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -201,6 +202,23 @@ MonoBehaviour:
   speed: 10
   shootToggle: 0
   fireRate: 1
+  typeOfShot: 0
+--- !u!114 &11461190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0c2d554e72a3d40a913207da171e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5061194, guid: 7ef47dfbb9ba5a04bb8151c1bccd7f32, type: 2}
+  speed: 0
+  shootToggle: 0
+  fireRate: 1
+  typeOfShot: 0
 --- !u!212 &21237366
 SpriteRenderer:
   m_ObjectHideFlags: 1

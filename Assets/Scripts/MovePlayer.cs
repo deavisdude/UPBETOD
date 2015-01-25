@@ -10,26 +10,50 @@ public class MovePlayer : MonoBehaviour {
 	public Rigidbody2D myBody;
 	public bool isOrbit,facingRight;
 	public int health,lives;
-	
+	private Animator anim;
+	public bool jump;
 	void Start(){
+		jump = false;
+		anim = transform.GetChild(1).GetComponent<Animator> ();
 		health = 1;
 		facingRight = true;
 		rotateConstant = 4.25f;
-		shootOutSpeed = 90f;
+		shootOutSpeed = 110f;
 		angle = 5f;
 		myBody = GetComponent<Rigidbody2D> ();
 	}
 	
 	void Update () {
 		float h = Input.GetAxis ("Horizontal");
+		if (h != 0) {
+						anim.SetBool ("Moving", true);		
+			anim.speed = 1;
+				} else {
+			anim.SetBool("Moving",false);	
+			anim.speed = 0;
+		}
 
 						if (Input.GetKey (KeyCode.D) && rigidbody2D.velocity.x < maxSpeed)
 								rigidbody2D.AddForce ((transform.right * (maxSpeed - rigidbody2D.velocity.x)) * Time.deltaTime * 60f);
 						else if (Input.GetKey (KeyCode.A) && (-rigidbody2D.velocity.x < maxSpeed))
 								rigidbody2D.AddForce ((-transform.right * (-(-maxSpeed - rigidbody2D.velocity.x))) * Time.deltaTime * 60f);
 
-						if (Input.GetKeyDown (KeyCode.Space) && Physics2D.Linecast (transform.position, groundCheck.position, layer))
-								rigidbody2D.AddForce (new Vector2 (0, speed), ForceMode2D.Impulse);
+						if (Input.GetKeyDown (KeyCode.Space) && Physics2D.Linecast (transform.position, groundCheck.position, layer)) {
+						rigidbody2D.AddForce (new Vector2 (0, speed), ForceMode2D.Impulse);
+			jump = true;
+				}
+		if (Physics2D.Linecast (transform.position, groundCheck.position, layer)) {
+						jump = false;		
+				} else {
+			jump = true;		
+		}
+		if (jump == true) {
+			anim.speed = 1;
+						anim.SetBool ("Jump", true);
+				} else {
+			anim.SetBool ("Jump", false);
+
+		}
 
 
 		
@@ -44,7 +68,7 @@ public class MovePlayer : MonoBehaviour {
 			Flip ();
 						if (Input.GetKeyUp (KeyCode.Space)) {
 				isOrbit = false;
-			
+			if(currentHole != null)
 								rigidbody2D.AddForce ((Vector3.Normalize (transform.position - currentHole.position)) * shootOutSpeed, ForceMode2D.Impulse);
 								currentHole = null;
 				GetComponent<HingeJoint2D>().connectedBody = null;			

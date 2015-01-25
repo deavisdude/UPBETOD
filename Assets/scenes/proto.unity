@@ -83,11 +83,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 446778, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.3499999
+      value: 8.93999958
       objectReference: {fileID: 0}
     - target: {fileID: 446778, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.30999994
+      value: -2.3599999
       objectReference: {fileID: 0}
     - target: {fileID: 446778, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_LocalPosition.z
@@ -125,6 +125,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 146778, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5832494, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
     - {fileID: 11494954, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
@@ -147,7 +151,7 @@ GameObject:
   - 114: {fileID: 292281236}
   m_Layer: 9
   m_Name: BlackHole
-  m_TagString: Blackhole
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,7 +205,7 @@ Transform:
   m_PrefabInternal: {fileID: 196372987}
   m_GameObject: {fileID: 292281234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.3499999, y: 5.30999994, z: 0}
+  m_LocalPosition: {x: 8.93999958, y: -2.3599999, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 1500035587}
@@ -467,7 +471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &507371650
 AudioListener:
   m_ObjectHideFlags: 0
@@ -710,7 +714,7 @@ Camera:
   m_Depth: 2
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294966783
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -783,7 +787,7 @@ GameObject:
   - 58: {fileID: 1500035586}
   m_Layer: 9
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Blackhole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

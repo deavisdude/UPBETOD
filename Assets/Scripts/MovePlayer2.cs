@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 //using Photon;
-public class MovePlayer : MonoBehaviour {
+public class MovePlayer2 : MonoBehaviour {
 	public float speed = 10f;
 	public float maxSpeed = 6;
 	public float rotateConstant,shootOutSpeed,angle;
@@ -24,7 +24,7 @@ public class MovePlayer : MonoBehaviour {
 	}
 	
 	void Update () {
-		float h = Input.GetAxis ("Horizontal");
+		float h = Input.GetAxis ("Horizontal 2");
         Debug.Log(h);
 		if (h != 0) {
 						anim.SetBool ("Moving", true);		
@@ -38,7 +38,7 @@ public class MovePlayer : MonoBehaviour {
 								rigidbody2D.AddForce ((h*transform.right * (maxSpeed - rigidbody2D.velocity.x)) * Time.deltaTime * 60f);
 						
 
-						if (Input.GetButtonDown("Jump") && Physics2D.Linecast (transform.position, groundCheck.position, layer)) {
+						if (Input.GetButtonDown("Jump 2") && Physics2D.Linecast (transform.position, groundCheck.position, layer)) {
 						rigidbody2D.AddForce (new Vector2 (0, speed), ForceMode2D.Impulse);
 			jump = true;
 				}
@@ -66,7 +66,7 @@ public class MovePlayer : MonoBehaviour {
 		else if (h < 0 && facingRight)
 			// ... flip the player.
 			Flip ();
-						if (Input.GetButtonUp("Jump")) {
+						if (Input.GetButtonUp("Jump 2")) {
 				isOrbit = false;
 			if(currentHole != null)
 								rigidbody2D.AddForce ((Vector3.Normalize (transform.position - currentHole.position)) * shootOutSpeed, ForceMode2D.Impulse);
@@ -85,7 +85,7 @@ public class MovePlayer : MonoBehaviour {
 	{
 						Debug.Log (collider.tag);
 
-                        if (Input.GetButton("Jump") && collider.tag == "Blackhole")
+                        if (Input.GetButton("Jump 2") && collider.tag == "Blackhole")
                         {
 								myBody.velocity = Vector2.zero;
 								Debug.Log ("blah");

@@ -54,7 +54,6 @@ public class bulletScript : MonoBehaviour {
 			
 			float rot_z = Mathf.Atan2 (shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
 			//transform.rotation = Quaternion.Euler (0f, 0f, rot_z);
-			Debug.Log("kasjh");
 			shootDirection.Normalize();
 			rigidbody2D.AddForce(shootDirection*blackHoleMod, ForceMode2D.Impulse);
 		}

@@ -8,12 +8,12 @@ public class MovePlayer : MonoBehaviour {
 	public LayerMask layer,blackHoles;
 	public Transform groundCheck,currentHole;
 	public Rigidbody2D myBody;
-	public bool isOrbit;
+	public bool isOrbit,facingRight;
 	public int health,lives;
 	
 	void Start(){
 		health = 1;
-	
+		facingRight = true;
 		rotateConstant = 2f;
 		shootOutSpeed = 75f;
 		angle = 5f;
@@ -21,6 +21,7 @@ public class MovePlayer : MonoBehaviour {
 	}
 	
 	void Update () {
+		float h = Input.GetAxis ("Horizontal");
 
 						if (Input.GetKey (KeyCode.D) && rigidbody2D.velocity.x < maxSpeed)
 								rigidbody2D.AddForce ((transform.right * (maxSpeed - rigidbody2D.velocity.x)) * Time.deltaTime * 60f);
@@ -32,7 +33,15 @@ public class MovePlayer : MonoBehaviour {
 
 
 		
+		// If the input is moving the player right and the player is facing left...
+		if (h > 0 && !facingRight)
+			// ... flip the player.
+			Flip ();
 		
+		// Otherwise if the input is moving the player left and the player is facing right...
+		else if (h < 0 && facingRight)
+			// ... flip the player.
+			Flip ();
 						if (Input.GetKeyUp (KeyCode.Space)) {
 				isOrbit = false;
 			
@@ -74,8 +83,19 @@ public class MovePlayer : MonoBehaviour {
 
 		}
 		
-		
+	void Flip ()
+	{
+		// Switch the way the player is labelled as facing.
+		facingRight = !facingRight;
+		// Multiply the player's x local scale by -1.
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+		//Debug.Log ("Flipped In Player ");
+		//UI.SendMessage ("DoneFlip");
+	}		
 	}
+
 
 
 

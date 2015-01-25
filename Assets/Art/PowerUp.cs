@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PowerUp : MonoBehaviour {
 
-	// Use this for initialization
+	/*// Use this for initialization
 	void Start () {
 	
 	}
@@ -23,3 +23,4 @@ public class PowerUp : MonoBehaviour {
 		}
 	}
 }
+*/}

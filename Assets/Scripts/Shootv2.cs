@@ -115,7 +115,20 @@ void ShootBullet(float shotSpeed, Vector3 direction, float rotMod)
 		Rigidbody2D bulletInstance = Instantiate (bullet, transform.position, transform.rotation) as Rigidbody2D;
 		bulletInstance.transform.eulerAngles = (new Vector3(0,0,rot_z+rotMod));
 		bulletInstance.AddRelativeForce (new Vector2(750*shotSpeed, 0));
-		
+		if (typeOfShot == 3) {
+			int color = Random.Range (0,4);
+			if(color == 0)
+			bulletInstance.gameObject.GetComponent<SpriteRenderer>().color = Color.green;		
+			if(color == 1)
+				bulletInstance.gameObject.GetComponent<SpriteRenderer>().color = Color.red;		
+
+			if(color == 2)
+				bulletInstance.gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;		
+
+			if(color == 3)
+				bulletInstance.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;		
+
+		}
 
 		Physics2D.IgnoreCollision (transform.parent.collider2D, bulletInstance.collider2D);
 		shootToggle = false;

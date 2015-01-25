@@ -83,11 +83,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 446778, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.3499999
+      value: 1.62
       objectReference: {fileID: 0}
     - target: {fileID: 446778, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.30999994
+      value: 2.49000001
       objectReference: {fileID: 0}
     - target: {fileID: 446778, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_LocalPosition.z
@@ -121,6 +121,10 @@ Prefab:
       propertyPath: m_Mass
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11494954, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
   m_RootGameObject: {fileID: 292281234}
@@ -139,6 +143,7 @@ GameObject:
   - 58: {fileID: 292281236}
   - 50: {fileID: 292281239}
   - 114: {fileID: 292281240}
+  - 114: {fileID: 292281241}
   m_Layer: 9
   m_Name: BlackHole
   m_TagString: Blackhole
@@ -194,7 +199,7 @@ Transform:
   m_PrefabInternal: {fileID: 196372987}
   m_GameObject: {fileID: 292281234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.3499999, y: 5.30999994, z: 0}
+  m_LocalPosition: {x: 1.62, y: 2.49000001, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -222,11 +227,24 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 196372987}
   m_GameObject: {fileID: 292281234}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3eb01499704c6644cb2ee7417b5abfb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &292281241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 292281234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ca23f37e4bdae499c213316f1da4df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPosition: {x: 0, y: 0, z: 0}
+  random: 0
 --- !u!1 &330532235
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +414,7 @@ MonoBehaviour:
   speed: 35
   shootToggle: 0
   fireRate: 1
+  typeOfShot: 0
 --- !u!23 &385539953
 Renderer:
   m_ObjectHideFlags: 0
@@ -970,6 +989,8 @@ MonoBehaviour:
   currentHole: {fileID: 0}
   myBody: {fileID: 0}
   isOrbit: 0
+  health: 0
+  lives: 0
 --- !u!50 &1733910677
 Rigidbody2D:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using Photon;
 public class MovePlayer : Photon.MonoBehaviour {
 	public float speed = 10f;
 	public float maxSpeed = 6;
-	public float rotateConstant,shootOutSpeed,angle;
+	public float rotateConstant,shootOutSpeed=200f,angle;
 	public LayerMask layer,blackHoles;
 	public Transform groundCheck,currentHole;
 	public Rigidbody2D myBody;
@@ -13,7 +13,7 @@ public class MovePlayer : Photon.MonoBehaviour {
 	void Start(){
 	
 		rotateConstant = 2f;
-		shootOutSpeed = 75f;
+		//shootOutSpeed = 75f;
 		angle = 5f;
 		myBody = GetComponent<Rigidbody2D> ();
 		PhotonNetwork.Instantiate ("crosshair", transform.position, transform.rotation, 0);

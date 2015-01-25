@@ -22,7 +22,7 @@ public class NetworkScript : Photon.MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (PhotonNetwork.playerList [1]);
+//		Debug.Log (PhotonNetwork.playerList [1]);
 		Debug.Log (PhotonNetwork.connectionStateDetailed);
 		/*if (PhotonNetwork.connected && PhotonNetwork.inRoom == false) {
 			PhotonNetwork.JoinRandomRoom ();

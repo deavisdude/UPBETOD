@@ -61,7 +61,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0289999992, y: 0, z: -6.1500001}
+  m_LocalPosition: {x: .0289999992, y: 0, z: 0}
   m_LocalScale: {x: .0749999955, y: .0181028806, z: 1}
   m_Children: []
   m_Father: {fileID: 437364}
@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.02999997, y: -2.9749999, z: 0}
+  m_LocalPosition: {x: -5.19000006, y: -2.8900001, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 437362}
@@ -87,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137366}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00700000022, y: -.0851999968, z: -6.1500001}
+  m_LocalPosition: {x: .00700000022, y: -.0851999968, z: 0}
   m_LocalScale: {x: .100000001, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 437364}
@@ -184,6 +184,7 @@ MonoBehaviour:
   currentHole: {fileID: 0}
   myBody: {fileID: 0}
   isOrbit: 0
+  facingRight: 0
   health: 0
   lives: 0
 --- !u!114 &11437364
@@ -198,9 +199,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 5061194, guid: ef2cb8c72dde03e4ea851c9e808dd0df, type: 2}
-  speed: 10
+  bulletStraight: {fileID: 5061194, guid: 1d96c3e520cba2540b85c79a5139e98a, type: 2}
+  Cannon: {fileID: 5065234, guid: f95e339a8a677d34db67885be7a028d8, type: 2}
+  speed: 1
   shootToggle: 0
   fireRate: 1
+  rot_z: 0
+  typeOfShot: 0
 --- !u!212 &21237366
 SpriteRenderer:
   m_ObjectHideFlags: 1

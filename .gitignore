@@ -34,3 +34,4 @@ Thumbs.db
 # Our Stuff   #
 # =========== #
 *.dll
+Assets/Photon Unity Networking/

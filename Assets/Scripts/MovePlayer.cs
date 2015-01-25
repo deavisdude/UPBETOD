@@ -23,12 +23,11 @@ public class MovePlayer : MonoBehaviour {
 	void Update () {
 		float h = Input.GetAxis ("Horizontal");
 
-						if (Input.GetKey (KeyCode.D) && rigidbody2D.velocity.x < maxSpeed)
-								rigidbody2D.AddForce ((transform.right * (maxSpeed - rigidbody2D.velocity.x)) * Time.deltaTime * 60f);
-						else if (Input.GetKey (KeyCode.A) && (-rigidbody2D.velocity.x < maxSpeed))
-								rigidbody2D.AddForce ((-transform.right * (-(-maxSpeed - rigidbody2D.velocity.x))) * Time.deltaTime * 60f);
+						if (rigidbody2D.velocity.x < maxSpeed)
+								rigidbody2D.AddForce ((Input.GetAxis ("Horizontal") *transform.right * (maxSpeed - rigidbody2D.velocity.x)) * Time.deltaTime * 60f);
 
-						if (Input.GetKeyDown (KeyCode.Space) && Physics2D.Linecast (transform.position, groundCheck.position, layer))
+
+                        if (Input.GetButton("Jump") &&Physics2D.Linecast(transform.position, groundCheck.position, layer))
 								rigidbody2D.AddForce (new Vector2 (0, speed), ForceMode2D.Impulse);
 
 
@@ -42,7 +41,7 @@ public class MovePlayer : MonoBehaviour {
 		else if (h < 0 && facingRight)
 			// ... flip the player.
 			Flip ();
-						if (Input.GetKeyUp (KeyCode.Space)) {
+						if (Input.GetButtonUp ("Jump")) {
 				isOrbit = false;
 			
 								rigidbody2D.AddForce ((Vector3.Normalize (transform.position - currentHole.position)) * shootOutSpeed, ForceMode2D.Impulse);
@@ -61,7 +60,8 @@ public class MovePlayer : MonoBehaviour {
 	{
 						Debug.Log (collider.tag);
 
-						if (Input.GetKey (KeyCode.Space) && collider.tag == "Blackhole") {
+                        if (Input.GetButton("Jump") && collider.tag == "Blackhole")
+                        {
 								myBody.velocity = Vector2.zero;
 								Debug.Log ("blah");
 								myBody.Sleep (); 

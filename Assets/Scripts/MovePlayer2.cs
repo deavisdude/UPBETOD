@@ -25,7 +25,7 @@ public class MovePlayer2 : MonoBehaviour {
 	
 	void Update () {
 		float h = Input.GetAxis ("Horizontal 2");
-        Debug.Log(h);
+       // Debug.Log(h);
 		if (h != 0) {
 						anim.SetBool ("Moving", true);		
 			anim.speed = 1;

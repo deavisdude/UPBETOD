@@ -83,11 +83,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 446778, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.88000011
+      value: -7.3499999
       objectReference: {fileID: 0}
     - target: {fileID: 446778, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .870000005
+      value: 5.30999994
       objectReference: {fileID: 0}
     - target: {fileID: 446778, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_LocalPosition.z
@@ -194,7 +194,7 @@ Transform:
   m_PrefabInternal: {fileID: 196372987}
   m_GameObject: {fileID: 292281234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.88000011, y: .870000005, z: 0}
+  m_LocalPosition: {x: -7.3499999, y: 5.30999994, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -396,7 +396,6 @@ MonoBehaviour:
   speed: 35
   shootToggle: 0
   fireRate: 1
-  typeOfShot: 0
 --- !u!23 &385539953
 Renderer:
   m_ObjectHideFlags: 0
@@ -458,7 +457,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &507371650
 AudioListener:
   m_ObjectHideFlags: 0
@@ -498,7 +497,7 @@ Camera:
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
-  field of view: 140.199997
+  field of view: 102
   orthographic: 0
   orthographic size: 5
   m_Depth: 3
@@ -519,7 +518,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 507371649}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.349999994, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1211485698}
@@ -701,7 +700,7 @@ Camera:
   m_Depth: 2
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294966783
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -716,7 +715,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1211485693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .479999989, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 507371654}
@@ -971,8 +970,6 @@ MonoBehaviour:
   currentHole: {fileID: 0}
   myBody: {fileID: 0}
   isOrbit: 0
-  health: 0
-  lives: 0
 --- !u!50 &1733910677
 Rigidbody2D:
   m_ObjectHideFlags: 0

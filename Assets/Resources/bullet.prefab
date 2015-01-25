@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2361194}
   - 50: {fileID: 5061194}
   - 114: {fileID: 11456888}
+  - 61: {fileID: 6127678}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -73,6 +74,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!61 &6127678
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161194}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1.00000012, y: 1}
+  m_Center: {x: 5.96046448e-08, y: 0}
 --- !u!114 &11456888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myDamage: 0
-  secondMod: 0
+  secondMod: 1005
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

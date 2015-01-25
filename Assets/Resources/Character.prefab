@@ -35,7 +35,7 @@ GameObject:
   - 233: {fileID: 23381580}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,6 +197,8 @@ MonoBehaviour:
   currentHole: {fileID: 0}
   myBody: {fileID: 0}
   isOrbit: 0
+  health: 0
+  lives: 0
 --- !u!114 &11437364
 MonoBehaviour:
   m_ObjectHideFlags: 1

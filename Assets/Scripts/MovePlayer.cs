@@ -9,8 +9,10 @@ public class MovePlayer : MonoBehaviour {
 	public Transform groundCheck,currentHole;
 	public Rigidbody2D myBody;
 	public bool isOrbit;
+	public int health,lives;
 	
 	void Start(){
+		health = 1;
 	
 		rotateConstant = 2f;
 		shootOutSpeed = 75f;
@@ -40,6 +42,11 @@ public class MovePlayer : MonoBehaviour {
 				isOrbit = false;
 				GetComponent<HingeJoint2D>().enabled = false;
 				}
+	}
+	public void Damage (int amount, Vector2 direction)
+	{
+		health -= amount;
+		rigidbody2D.AddForce (direction * amount);
 	}
 	void OnTriggerStay2D(Collider2D collider)
 	{

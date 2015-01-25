@@ -13,7 +13,6 @@ GameObject:
   - 23: {fileID: 2337366}
   - 114: {fileID: 11437360}
   - 114: {fileID: 11437364}
-  - 114: {fileID: 11454812}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -33,12 +32,10 @@ GameObject:
   - 61: {fileID: 6137366}
   - 50: {fileID: 5037366}
   - 114: {fileID: 11437362}
-  - 114: {fileID: 11437366}
-  - 114: {fileID: 11457976}
   - 233: {fileID: 23381580}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +185,7 @@ MonoBehaviour:
   speed: 25
   maxSpeed: 25
   rotateConstant: 0
-  shootOutSpeed: 200
+  shootOutSpeed: 0
   angle: 0
   layer:
     serializedVersion: 2
@@ -200,6 +197,8 @@ MonoBehaviour:
   currentHole: {fileID: 0}
   myBody: {fileID: 0}
   isOrbit: 0
+  health: 0
+  lives: 0
 --- !u!114 &11437364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,72 +210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0c2d554e72a3d40a913207da171e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5095378, guid: 7ef47dfbb9ba5a04bb8151c1bccd7f32, type: 2}
+  bullet: {fileID: 5061194, guid: ef2cb8c72dde03e4ea851c9e808dd0df, type: 2}
   speed: 10
   shootToggle: 0
   fireRate: 1
---- !u!114 &11437366
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 137364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ownerId: 0
-  group: 0
-  prefixBackup: -1
-  observed: {fileID: 0}
-  synchronization: 3
-  onSerializeTransformOption: 0
-  onSerializeRigidBodyOption: 2
-  ownershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 11457976}
-  ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
-  isRuntimeInstantiated: 0
---- !u!114 &11454812
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 137362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ownerId: 0
-  group: 0
-  prefixBackup: -1
-  observed: {fileID: 0}
-  synchronization: 3
-  onSerializeTransformOption: 3
-  onSerializeRigidBodyOption: 2
-  ownershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 437362}
-  ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
-  isRuntimeInstantiated: 0
---- !u!114 &11457976
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 137364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e361da820ff1a48833c5acc9563121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lagMod: 10
 --- !u!212 &21237366
 SpriteRenderer:
   m_ObjectHideFlags: 1

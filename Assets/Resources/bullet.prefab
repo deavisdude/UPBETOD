@@ -11,8 +11,13 @@ GameObject:
   - 33: {fileID: 3395378}
   - 23: {fileID: 2395378}
   - 50: {fileID: 5095378}
+<<<<<<< HEAD
   - 114: {fileID: 11420754}
   - 61: {fileID: 6116424}
+=======
+  - 114: {fileID: 11428950}
+  - 114: {fileID: 11433780}
+>>>>>>> 9b7c9d4891d63ad2ca786a9cc2a71f02c7c45174
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -74,18 +79,45 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+<<<<<<< HEAD
 --- !u!61 &6116424
 BoxCollider2D:
+=======
+--- !u!114 &11428950
+MonoBehaviour:
+>>>>>>> 9b7c9d4891d63ad2ca786a9cc2a71f02c7c45174
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195378}
   m_Enabled: 1
+<<<<<<< HEAD
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Size: {x: 1.00000012, y: 1}
   m_Center: {x: 5.96046448e-08, y: 0}
 --- !u!114 &11420754
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  prefixBackup: -1
+  observed: {fileID: 0}
+  synchronization: 3
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 495378}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 0
+  instantiationId: -1
+  isRuntimeInstantiated: 0
+--- !u!114 &11433780
+>>>>>>> 9b7c9d4891d63ad2ca786a9cc2a71f02c7c45174
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -93,10 +125,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 195378}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: a13ca780c0875b348bb86216ea210d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myDamage: 0
+=======
+  m_Script: {fileID: 11500000, guid: 74e361da820ff1a48833c5acc9563121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> 9b7c9d4891d63ad2ca786a9cc2a71f02c7c45174
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

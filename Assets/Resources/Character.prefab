@@ -188,7 +188,7 @@ MonoBehaviour:
   speed: 25
   maxSpeed: 25
   rotateConstant: 0
-  shootOutSpeed: 0
+  shootOutSpeed: 200
   angle: 0
   layer:
     serializedVersion: 2

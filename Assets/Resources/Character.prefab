@@ -11,7 +11,6 @@ GameObject:
   - 33: {fileID: 3337366}
   - 64: {fileID: 6437366}
   - 23: {fileID: 2337366}
-  - 114: {fileID: 11437360}
   - 114: {fileID: 11437364}
   m_Layer: 0
   m_Name: Gun
@@ -159,18 +158,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &11437360
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 137362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b30b2e0cd558478c9d7c2cb6acb5973, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointAt: {fileID: 121580, guid: d785e5858bdc96747b77f613370157c7, type: 2}
 --- !u!114 &11437362
 MonoBehaviour:
   m_ObjectHideFlags: 1

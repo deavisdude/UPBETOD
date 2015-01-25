@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0c2d554e72a3d40a913207da171e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5061194, guid: ef2cb8c72dde03e4ea851c9e808dd0df, type: 2}
+  bullet: {fileID: 0}
   speed: 35
   shootToggle: 0
   fireRate: 1
@@ -478,7 +478,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 507371649}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!92 &507371651
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1140,6 +1140,10 @@ Prefab:
     - target: {fileID: 11437364, guid: 1e847a4d4ddbca744a66e08cac301239, type: 2}
       propertyPath: speed
       value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437364, guid: 1e847a4d4ddbca744a66e08cac301239, type: 2}
+      propertyPath: bullet
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

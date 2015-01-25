@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+//using Photon;
 public class MovePlayer : MonoBehaviour {
 	public float speed = 10f;
 	public float maxSpeed = 6;

@@ -85,6 +85,7 @@ GameObject:
   - 33: {fileID: 292281237}
   - 23: {fileID: 292281235}
   - 58: {fileID: 292281236}
+  - 114: {fileID: 292281239}
   m_Layer: 9
   m_Name: BlackHole
   m_TagString: Blackhole
@@ -145,6 +146,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &292281239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 292281234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eb01499704c6644cb2ee7417b5abfb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &330532235
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,3 +749,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f360c54a89d8245b6dd86afd34ddf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  made: 0

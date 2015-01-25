@@ -34,4 +34,15 @@ public class NetworkScript : Photon.MonoBehaviour {
 		if(PhotonNetwork.inRoom)
 		PhotonNetwork.Instantiate ("Character", transform.position, transform.rotation, 0);
 	}
+	void OnGUI()
+	{
+		if(GUI.Button (new Rect (0,0,Screen.width*.25f,Screen.height*.1f),"Spawn"))
+		{
+			Debug.Log("clci");
+			
+			PhotonNetwork.Instantiate ("Character", transform.position, transform.rotation, 0);
+			
+		}
+
+	}
 }

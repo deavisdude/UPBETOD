@@ -43,6 +43,9 @@ public class Shootv2 : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Alpha3)) {
 			typeOfShot = 2;		
 		}
+		if (Input.GetKeyDown (KeyCode.Alpha4)) {
+			typeOfShot = 3;		
+		}
 		if (shootToggle) {
 			if (Input.GetButtonDown ("Fire1")) {
 				if (typeOfShot == 0) {
@@ -54,6 +57,8 @@ public class Shootv2 : MonoBehaviour {
 					shootDirection = shootDirection - transform.position;
 					shootDirection.Normalize ();
 					ShootBullet(speed*3,shootDirection,0f);
+					fireRate = .8f;
+
 				}
 				else if(typeOfShot ==1)
 				{
@@ -67,6 +72,8 @@ public class Shootv2 : MonoBehaviour {
 					ShootBullet(speed*3f,shootDirection,0f);
 					ShootBullet(speed*3f,shootDirection,10f);
 					shootToggle = false;
+					fireRate = .8f;
+
 			
 				}
 				else if(typeOfShot == 2)
@@ -80,10 +87,23 @@ public class Shootv2 : MonoBehaviour {
 					shootDirection = shootDirection - transform.position;
 					ShootCannon(speed,shootDirection);
 					shootToggle = false;
+					fireRate = .8f;
 				}
-				else if(typeOfShot == 3)
+			
+			}
+			if(Input.GetMouseButton(0))
+			{
+				if(typeOfShot == 3)
 				{
-
+					shootDirection = Input.mousePosition; //set direction to where the mouse is initially
+					shootDirection.z = 0.0f; //Cure users somehow clicking in the z axis
+					
+					shootDirection = Camera.main.ScreenToWorldPoint (shootDirection); 
+					
+					shootDirection = shootDirection - transform.position;
+					shootDirection.Normalize ();
+					ShootBullet(speed*3,shootDirection,0f);
+					fireRate = .1f;
 				}
 			}
 		}

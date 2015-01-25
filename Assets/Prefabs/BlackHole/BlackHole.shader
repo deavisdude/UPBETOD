@@ -44,9 +44,10 @@
          {
 	    float warp = dot(normalize(input.viewDir), normalize(input.normalDir));
 	    warp = pow(abs(warp), _DistortionPower);
-            float3 refractedDir = refract(normalize(input.viewDir), normalize(input.normalDir), 1 / (1 + warp));
+	    float3 refractedDir = refract(normalize(input.viewDir), normalize(input.normalDir), 1 / (1 + warp));
+	    refractedDir.z *= -1;
 	    float4 result = texCUBE(_Cube, refractedDir);
-	    if(warp >= 1 - 2 / _DistortionPower) result = float4(0, 0, 0, 0);
+	    if(warp >= 1 - 2 / _DistortionPower) result = float4(0, 0, 0, 1);
 	    result.a = clamp(warp * _DistortionPower, 0, 1);
 	    return result;
 	 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-public class Shootv2 : MonoBehaviour {
+public class Shootv22 : MonoBehaviour {
 
 	public Rigidbody2D bullet,bulletStraight,Cannon; // Prefab of the bullet.
 	Vector3 shootDirection; //Point to initially shoot towards
@@ -29,7 +29,7 @@ public class Shootv2 : MonoBehaviour {
         {
             transform.localScale = transform.parent.localScale;
         }*/
-        shootDirection = new Vector2(Input.GetAxis("HorizontalR"), Input.GetAxis("VerticalR")); //set direction to where the mouse is initially
+        shootDirection = new Vector2(Input.GetAxis("HorizontalR 2"), Input.GetAxis("VerticalR 2")); //set direction to where the mouse is initially
 		shootDirection.z = 0.0f; //Cure users somehow clicking in the z axis
 		
 		//shootDirection = Camera.main.ScreenToWorldPoint (shootDirection); 
@@ -57,7 +57,7 @@ public class Shootv2 : MonoBehaviour {
 			typeOfShot = 3;		
 		}
 		if (shootToggle) {
-			if (Input.GetButtonDown ("Fire1")) {
+			if (Input.GetButtonDown ("Fire2")) {
 				if (typeOfShot == 0) {
 					shootDirection = Input.mousePosition; //set direction to where the mouse is initially
 					shootDirection.z = 0.0f; //Cure users somehow clicking in the z axis
@@ -101,7 +101,7 @@ public class Shootv2 : MonoBehaviour {
 				}
 			
 			}
-			if(Input.GetButton("Fire1"))
+			if(Input.GetButton("Fire2"))
 			{
 				if(typeOfShot == 3)
 				{

@@ -35,7 +35,7 @@
          {
             vertexOutput output;
             output.viewDir = mul(_Object2World, input.vertex).xyz - _WorldSpaceCameraPos;
-	    output.viewDir = (output.viewDir + float3(0, 0, 10)) * 0.5;
+	    //output.viewDir = (output.viewDir + float3(0, 0, 10)) * 0.5;
             output.normalDir = normalize(mul(float4(input.normal, 0), _World2Object).xyz);
             output.pos = mul(UNITY_MATRIX_MVP, input.vertex);
             return output;

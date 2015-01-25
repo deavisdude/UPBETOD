@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2337366}
   - 114: {fileID: 11437360}
   - 114: {fileID: 11437364}
-  - 114: {fileID: 11491670}
+  - 114: {fileID: 11454812}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -33,9 +33,9 @@ GameObject:
   - 61: {fileID: 6137366}
   - 50: {fileID: 5037366}
   - 114: {fileID: 11437362}
+  - 114: {fileID: 11437366}
   - 114: {fileID: 11457976}
-  - 114: {fileID: 11401552}
-  - 233: {fileID: 23301430}
+  - 233: {fileID: 23381580}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -53,23 +53,6 @@ GameObject:
   - 4: {fileID: 437366}
   m_Layer: 0
   m_Name: groundCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &180742
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 480742}
-  - 212: {fileID: 21280742}
-  - 114: {fileID: 11480742}
-  m_Layer: 0
-  m_Name: crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,12 +77,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.57999992, y: -3.55999994, z: 0}
+  m_LocalPosition: {x: -1.02999997, y: -2.9749999, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 437362}
   - {fileID: 437366}
-  - {fileID: 480742}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &437366
@@ -114,18 +96,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 437364}
   m_RootOrder: 1
---- !u!4 &480742
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 180742}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0560000017, y: .201000005, z: 0}
-  m_LocalScale: {x: .100000001, y: .100000001, z: 1}
-  m_Children: []
-  m_Father: {fileID: 437364}
-  m_RootOrder: 2
 --- !u!23 &2337366
 Renderer:
   m_ObjectHideFlags: 1
@@ -192,31 +162,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &11401552
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 137364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ownerId: 0
-  group: 0
-  prefixBackup: -1
-  observed: {fileID: 0}
-  synchronization: 0
-  onSerializeTransformOption: 3
-  onSerializeRigidBodyOption: 2
-  ownershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
-  isRuntimeInstantiated: 0
 --- !u!114 &11437360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b30b2e0cd558478c9d7c2cb6acb5973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointAt: {fileID: 180742}
+  pointAt: {fileID: 121580, guid: d785e5858bdc96747b77f613370157c7, type: 2}
 --- !u!114 &11437362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,7 +215,7 @@ MonoBehaviour:
   speed: 10
   shootToggle: 0
   fireRate: 1
---- !u!114 &11457976
+--- !u!114 &11437366
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -278,22 +223,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 137364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e361da820ff1a48833c5acc9563121, type: 3}
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lagMod: 0
---- !u!114 &11480742
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 180742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83f82409ff0f4493b8dc911b38e22db7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11491670
+  ownerId: 0
+  group: 0
+  prefixBackup: -1
+  observed: {fileID: 0}
+  synchronization: 3
+  onSerializeTransformOption: 0
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 11457976}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 0
+  instantiationId: -1
+  isRuntimeInstantiated: 0
+--- !u!114 &11454812
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -313,11 +260,23 @@ MonoBehaviour:
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 11437360}
+  - {fileID: 437362}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
   isRuntimeInstantiated: 0
+--- !u!114 &11457976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e361da820ff1a48833c5acc9563121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lagMod: 10
 --- !u!212 &21237366
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -340,29 +299,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ccb37e45bd1444776b28278d3587f19a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!212 &21280742
-SpriteRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 180742}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9d607e69b718c4ba1be2d405a9887aa4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!233 &23301430
+--- !u!233 &23381580
 HingeJoint2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -372,7 +309,7 @@ HingeJoint2D:
   m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: .0700000003, y: .0700000003}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 1000
@@ -380,7 +317,7 @@ HingeJoint2D:
   m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_UpperAngle: 360
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

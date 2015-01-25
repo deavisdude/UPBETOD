@@ -13,8 +13,8 @@ GameObject:
   - 50: {fileID: 5061194}
   - 114: {fileID: 11456888}
   - 61: {fileID: 6127678}
-  m_Layer: 10
-  m_Name: bullet
+  m_Layer: 11
+  m_Name: bulletStraight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myDamage: 0
-  secondMod: 100
+  secondMod: 60
   lifeTime: 0
 --- !u!1001 &100100000
 Prefab:

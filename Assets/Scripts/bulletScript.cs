@@ -8,6 +8,12 @@ public class bulletScript : MonoBehaviour {
 	public int lifeTime;
 	// Use this for initialization
 	void Start () {
+		if (name.Contains ("Cannon")) {
+						secondMod = 60;
+				} else {
+				
+			secondMod = 100f;
+		}
 		StartCoroutine (Decay ());
 		//secondMod = 2f;
 		myDamage = 5;
@@ -41,7 +47,7 @@ public class bulletScript : MonoBehaviour {
 	{
 		while (true) {
 			lifeTime++;
-			if(lifeTime >= 3)
+			if(lifeTime >= 5)
 				Destroy(gameObject);
 			yield return new WaitForSeconds (1f);		
 		}

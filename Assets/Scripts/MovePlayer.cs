@@ -28,18 +28,16 @@ public class MovePlayer : MonoBehaviour {
         Debug.Log(h);
 		if (h != 0) {
 						anim.SetBool ("Moving", true);		
-			anim.speed = 1;
 				} else {
 			anim.SetBool("Moving",false);	
-			anim.speed = 0;
 		}
 
-						if (rigidbody2D.velocity.x < maxSpeed)
-								rigidbody2D.AddForce ((h*transform.right * (maxSpeed - rigidbody2D.velocity.x)) * Time.deltaTime * 60f);
+						if (GetComponent<Rigidbody2D>().velocity.x < maxSpeed)
+								GetComponent<Rigidbody2D>().AddForce ((h*transform.right * (maxSpeed - GetComponent<Rigidbody2D>().velocity.x)) * Time.deltaTime * 60f);
 						
 
 						if (Input.GetButtonDown("Jump") && Physics2D.Linecast (transform.position, groundCheck.position, layer)) {
-						rigidbody2D.AddForce (new Vector2 (0, speed), ForceMode2D.Impulse);
+						GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, speed), ForceMode2D.Impulse);
 			jump = true;
 				}
 		if (Physics2D.Linecast (transform.position, groundCheck.position, layer)) {
@@ -69,7 +67,7 @@ public class MovePlayer : MonoBehaviour {
 						if (Input.GetButtonUp("Jump")) {
 				isOrbit = false;
 			if(currentHole != null)
-								rigidbody2D.AddForce ((Vector3.Normalize (transform.position - currentHole.position)) * shootOutSpeed, ForceMode2D.Impulse);
+								GetComponent<Rigidbody2D>().AddForce ((Vector3.Normalize (transform.position - currentHole.position)) * shootOutSpeed, ForceMode2D.Impulse);
 								currentHole = null;
 				GetComponent<HingeJoint2D>().connectedBody = null;			
 				isOrbit = false;
@@ -79,7 +77,7 @@ public class MovePlayer : MonoBehaviour {
 	public void Damage (int amount, Vector2 direction)
 	{
 		health -= amount;
-		rigidbody2D.AddForce (direction * amount);
+		GetComponent<Rigidbody2D>().AddForce (direction * amount);
 	}
 	void OnTriggerStay2D(Collider2D collider)
 	{

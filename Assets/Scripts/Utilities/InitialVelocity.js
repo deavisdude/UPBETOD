@@ -5,9 +5,9 @@ var randomize : boolean = false;
 
 function Start () {
 if(randomize)	startVelocity = Random.insideUnitSphere * 10f;
-if(rigidbody == null)	return;
+if(GetComponent.<Rigidbody>() == null)	return;
 yield WaitForFixedUpdate();
-rigidbody.velocity += startVelocity;
+GetComponent.<Rigidbody>().velocity += startVelocity;
 }
 
 function Update () {

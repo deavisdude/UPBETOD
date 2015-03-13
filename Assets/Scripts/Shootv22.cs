@@ -140,7 +140,7 @@ void ShootBullet(float shotSpeed, Vector3 direction, float rotMod)
 
 		}
 
-		Physics2D.IgnoreCollision (transform.parent.collider2D, bulletInstance.collider2D);
+		Physics2D.IgnoreCollision (transform.parent.GetComponent<Collider2D>(), bulletInstance.GetComponent<Collider2D>());
 		shootToggle = false;
 		
 		if (IsInvoking () == false) {
@@ -155,7 +155,7 @@ void ShootBullet(float shotSpeed, Vector3 direction, float rotMod)
 		bulletInstance.AddRelativeForce (new Vector2(750*shotSpeed, 0));
 		
 		
-		Physics2D.IgnoreCollision (transform.parent.collider2D, bulletInstance.collider2D);
+		Physics2D.IgnoreCollision (transform.parent.GetComponent<Collider2D>(), bulletInstance.GetComponent<Collider2D>());
 		shootToggle = false;
 		
 		if (IsInvoking () == false) {
@@ -169,7 +169,7 @@ void ShootBullet(float shotSpeed, Vector3 direction, float rotMod)
 		bulletInstance.AddRelativeForce (new Vector2(750*speed, 0));
 		
 		
-		Physics2D.IgnoreCollision (transform.parent.collider2D, bulletInstance.collider2D);
+		Physics2D.IgnoreCollision (transform.parent.GetComponent<Collider2D>(), bulletInstance.GetComponent<Collider2D>());
 		shootToggle = false;
 		
 		if (IsInvoking () == false) {

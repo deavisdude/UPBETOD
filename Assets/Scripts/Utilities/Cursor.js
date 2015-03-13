@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 function Start(){
-Screen.showCursor = false;
+UnityEngine.Cursor.visible = false;
 }
 
 function Update () {

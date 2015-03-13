@@ -24,7 +24,7 @@ public class bulletScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		rigidbody2D.AddForce (transform.right * Time.deltaTime * 2);
+		GetComponent<Rigidbody2D>().AddForce (transform.right * Time.deltaTime * 2);
 
 		if (Input.GetKeyDown (KeyCode.G)) {
 			blackHoleMod++;		
@@ -38,7 +38,7 @@ public class bulletScript : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.gameObject.tag == "Player") {
-						collision.gameObject.GetComponent<MovePlayer> ().Damage (myDamage, rigidbody2D.velocity);	
+						collision.gameObject.GetComponent<MovePlayer> ().Damage (myDamage, GetComponent<Rigidbody2D>().velocity);	
 		
 				}
 		if (collision.gameObject.tag == "Floor") {
@@ -77,7 +77,7 @@ public class bulletScript : MonoBehaviour {
 			float rot_z = Mathf.Atan2 (shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
 			//transform.rotation = Quaternion.Euler (0f, 0f, rot_z);
 			shootDirection.Normalize();
-			rigidbody2D.AddForce(shootDirection*blackHoleMod, ForceMode2D.Impulse);
+			GetComponent<Rigidbody2D>().AddForce(shootDirection*blackHoleMod, ForceMode2D.Impulse);
 		}
 	}
 }

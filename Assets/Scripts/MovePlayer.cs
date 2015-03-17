@@ -1,7 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
+using InControl;
 //using Photon;
 public class MovePlayer : MonoBehaviour {
+
+	public InputDevice controller;
+
 	public float speed = 10f;
 	public float maxSpeed = 6;
 	public float rotateConstant,shootOutSpeed,angle;
@@ -24,19 +28,18 @@ public class MovePlayer : MonoBehaviour {
 	}
 	
 	void Update () {
-		float h = Input.GetAxis ("Horizontal");
-        Debug.Log(h);
+		float h = controller.LeftStickX.Value;
 		if (h != 0) {
 						anim.SetBool ("Moving", true);		
 				} else {
 			anim.SetBool("Moving",false);	
 		}
 
-						if (GetComponent<Rigidbody2D>().velocity.x < maxSpeed)
-								GetComponent<Rigidbody2D>().AddForce ((h*transform.right * (maxSpeed - GetComponent<Rigidbody2D>().velocity.x)) * Time.deltaTime * 60f);
+						if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) < maxSpeed)
+								GetComponent<Rigidbody2D>().AddForce ((h*transform.right * (maxSpeed - Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x))) * Time.deltaTime * 60f);
 						
 
-						if (Input.GetButtonDown("Jump") && Physics2D.Linecast (transform.position, groundCheck.position, layer)) {
+						if (controller.Action1.IsPressed && Physics2D.Linecast (transform.position, groundCheck.position, layer)) {
 						GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, speed), ForceMode2D.Impulse);
 			jump = true;
 				}
@@ -64,7 +67,7 @@ public class MovePlayer : MonoBehaviour {
 		else if (h < 0 && facingRight)
 			// ... flip the player.
 			Flip ();
-						if (Input.GetButtonUp("Jump")) {
+						if (controller.Action1.WasReleased) {
 				isOrbit = false;
 			if(currentHole != null)
 								GetComponent<Rigidbody2D>().AddForce ((Vector3.Normalize (transform.position - currentHole.position)) * shootOutSpeed, ForceMode2D.Impulse);
@@ -83,7 +86,7 @@ public class MovePlayer : MonoBehaviour {
 	{
 						Debug.Log (collider.tag);
 
-                        if (Input.GetButton("Jump") && collider.tag == "Blackhole")
+                        if (controller.Action1.IsPressed && collider.tag == "Blackhole")
                         {
 								myBody.velocity = Vector2.zero;
 								Debug.Log ("blah");

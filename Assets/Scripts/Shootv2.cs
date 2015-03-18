@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using InControl;
+
 public class Shootv2 : MonoBehaviour {
 
 	public Rigidbody2D bullet,bulletStraight,Cannon; // Prefab of the bullet.
@@ -11,6 +13,10 @@ public class Shootv2 : MonoBehaviour {
 	private float afireRate;
     public Transform blastStart;
 	public int typeOfShot;
+
+	public InputDevice controller;
+	
+
 	void Start()
 	{
 		shootToggle = true;
@@ -29,7 +35,7 @@ public class Shootv2 : MonoBehaviour {
         {
             transform.localScale = transform.parent.localScale;
         }*/
-        shootDirection = new Vector2(Input.GetAxis("HorizontalR"), Input.GetAxis("VerticalR")); //set direction to where the mouse is initially
+        shootDirection = new Vector2(controller.RightStickX.Value, controller.RightStickY.Value); //set direction to where the mouse is initially
 		shootDirection.z = 0.0f; //Cure users somehow clicking in the z axis
 		
 		//shootDirection = Camera.main.ScreenToWorldPoint (shootDirection); 
@@ -44,20 +50,20 @@ public class Shootv2 : MonoBehaviour {
 		rot_z = Mathf.Atan2 (shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
 		transform.rotation = Quaternion.Euler (0f, 0f, rot_z);
 		//Debug, 1-4 change ammo type
-		if (Input.GetKeyDown (KeyCode.Alpha1)) {
+		if (controller.DPadUp.IsPressed) {
 				typeOfShot = 0;		
 		}
-		if (Input.GetKeyDown (KeyCode.Alpha2)) {
+		if (controller.DPadLeft.IsPressed) {
 			typeOfShot = 1;		
 		}
-		if (Input.GetKeyDown (KeyCode.Alpha3)) {
+		if (controller.DPadRight.IsPressed) {
 			typeOfShot = 2;		
 		}
-		if (Input.GetKeyDown (KeyCode.Alpha4)) {
+		if (controller.DPadDown.IsPressed) {
 			typeOfShot = 3;		
 		}
 		if (shootToggle) {
-			if (Input.GetButtonDown ("Fire1")) {
+			if (controller.RightTrigger.IsPressed) {
 				if (typeOfShot == 0) {
 					shootDirection = Input.mousePosition; //set direction to where the mouse is initially
 					shootDirection.z = 0.0f; //Cure users somehow clicking in the z axis
@@ -100,9 +106,8 @@ public class Shootv2 : MonoBehaviour {
 					fireRate = .8f;
 				}
 			
-			}
-			if(Input.GetButton("Fire1"))
-			{
+			
+
 				if(typeOfShot == 3)
 				{
 					shootDirection = Input.mousePosition; //set direction to where the mouse is initially

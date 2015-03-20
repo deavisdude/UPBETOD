@@ -49,6 +49,8 @@ public class Shootv2 : MonoBehaviour {
 		
 		rot_z = Mathf.Atan2 (shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
 		transform.rotation = Quaternion.Euler (0f, 0f, rot_z);
+		GameObject.Find("ArmLeft").GetComponent<Transform>().rotation = Quaternion.Euler (0f, 0f, rot_z/8);
+		GameObject.Find("ArmRight").GetComponent<Transform>().rotation = Quaternion.Euler (0f, 0f, rot_z/8);
 		//Debug, 1-4 change ammo type
 		if (controller.DPadUp.IsPressed) {
 				typeOfShot = 0;		

@@ -232,7 +232,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 446778, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5832494, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_Radius
@@ -684,7 +684,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 446778, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5832494, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_Radius
@@ -845,7 +845,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 446778, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5832494, guid: c97c85752aae68a49b43e7c4dbbc6083, type: 2}
       propertyPath: m_Radius

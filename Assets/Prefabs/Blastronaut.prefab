@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 422586}
   - 212: {fileID: 21222586}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 497232}
   - 212: {fileID: 21297232}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - 4: {fileID: 497234}
   - 212: {fileID: 21297234}
   - 95: {fileID: 9597234}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 497236}
   - 212: {fileID: 21297236}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 497238}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Blastronaut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,8 +137,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -232.949997, y: 0, z: 0}
+  m_LocalScale: {x: 30, y: 30, z: 0}
   m_Children:
   - {fileID: 497236}
   - {fileID: 497234}

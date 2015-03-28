@@ -6,6 +6,10 @@ public class MovePlayer : MonoBehaviour {
 
 	public InputDevice controller;
 
+	public GameObject deathPrefab;
+
+	Vector3 startPos;
+
 	public float speed = 10f;
 	public float maxSpeed = 6;
 	public float rotateConstant,shootOutSpeed,angle;
@@ -19,12 +23,13 @@ public class MovePlayer : MonoBehaviour {
 	void Start(){
 		jump = false;
 		anim = transform.GetChild(1).GetComponent<Animator> ();
-		health = 1;
+		health = 30;
 		facingRight = true;
 		rotateConstant = 4.25f;
 		shootOutSpeed = 110f;
 		angle = 5f;
 		myBody = GetComponent<Rigidbody2D> ();
+		startPos = transform.position;
 	}
 	
 	void Update () {
@@ -67,15 +72,25 @@ public class MovePlayer : MonoBehaviour {
 		else if (h < 0 && facingRight)
 			// ... flip the player.
 			Flip ();
-						if (controller.Action1.WasReleased) {
-				isOrbit = false;
+		if (controller.Action1.WasReleased) {
+			isOrbit = false;
 			if(currentHole != null)
-								GetComponent<Rigidbody2D>().AddForce ((Vector3.Normalize (transform.position - currentHole.position)) * shootOutSpeed, ForceMode2D.Impulse);
-								currentHole = null;
+				GetComponent<Rigidbody2D>().AddForce ((Vector3.Normalize (transform.position - currentHole.position)) * shootOutSpeed, ForceMode2D.Impulse);
+				currentHole = null;
 				GetComponent<HingeJoint2D>().connectedBody = null;			
 				isOrbit = false;
 				GetComponent<HingeJoint2D>().enabled = false;
 				}
+
+		if(controller.Action2.IsPressed){
+			//Respawn
+			transform.position = startPos;
+		}
+
+		if(health <= 0){
+			Destroy(this);
+			Instantiate(deathPrefab, transform.position, transform.rotation);
+		}
 	}
 	public void Damage (int amount, Vector2 direction)
 	{

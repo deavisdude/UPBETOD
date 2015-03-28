@@ -35,7 +35,11 @@ public class Shootv2 : MonoBehaviour {
         {
             transform.localScale = transform.parent.localScale;
         }*/
-        shootDirection = new Vector2(controller.RightStickX.Value, controller.RightStickY.Value); //set direction to where the mouse is initially
+		if(GetComponentInParent<MovePlayer>().facingRight){
+			shootDirection = new Vector2(controller.RightStickX.Value, controller.RightStickY.Value);
+		}else{
+        	shootDirection = new Vector2(-controller.RightStickX.Value, controller.RightStickY.Value); //set direction to where the mouse is initially
+		}
 		shootDirection.z = 0.0f; //Cure users somehow clicking in the z axis
 		
 		//shootDirection = Camera.main.ScreenToWorldPoint (shootDirection); 

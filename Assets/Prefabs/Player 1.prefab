@@ -336,6 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93631b49ee04c462f9daa5c660b9e7b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathPrefab: {fileID: 151178, guid: a84dffdf13df0f441b83a32b36d8bf3a, type: 2}
   speed: 10
   maxSpeed: 35
   rotateConstant: 0

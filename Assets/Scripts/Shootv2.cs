@@ -92,9 +92,9 @@ public class Shootv2 : MonoBehaviour {
 					shootDirection = Camera.main.ScreenToWorldPoint (shootDirection); 
 					
 					shootDirection = shootDirection - transform.position;
-					//ShootBullet(speed *3f,shootDirection,-10f);
-					//ShootBullet(speed*3f,shootDirection,0f);
-					//ShootBullet(speed*3f,shootDirection,10f);
+					ShootBullet(speed *3f,shootDirection,-10f);
+					ShootBullet(speed*3f,shootDirection,0f);
+					ShootBullet(speed*3f,shootDirection,10f);
 					shootToggle = false;
 					fireRate = .8f;
 
@@ -125,7 +125,7 @@ public class Shootv2 : MonoBehaviour {
 					
 					shootDirection = shootDirection - transform.position;
 					shootDirection.Normalize ();
-					//ShootBullet(speed*3,shootDirection,0f);
+					ShootBullet(speed*3,shootDirection,0f);
 					fireRate = .1f;
 				}
 			}

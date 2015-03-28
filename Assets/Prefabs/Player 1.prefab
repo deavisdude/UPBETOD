@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 426230}
   - 212: {fileID: 21226236}
   m_Layer: 0
-  m_Name: Arm
+  m_Name: ArmRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ GameObject:
   - 4: {fileID: 426238}
   - 212: {fileID: 21226242}
   m_Layer: 0
-  m_Name: Arm
+  m_Name: ArmLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,7 +195,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0500000007, y: .579999983, z: 0}
+  m_LocalPosition: {x: .0500000007, y: .579999983, z: .100000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 426234}

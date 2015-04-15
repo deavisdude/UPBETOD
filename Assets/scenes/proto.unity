@@ -909,7 +909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnObject:
   - {fileID: 0}
-  - {fileID: 137364, guid: 1e847a4d4ddbca744a66e08cac301239, type: 2}
+  - {fileID: 0}
   parent: {fileID: 0}
   xRange: 1
   yRange: .100000001

@@ -52,9 +52,9 @@ public class Shootv2 : MonoBehaviour {
 		//shootDirection.Normalize ();
 		
 		rot_z = Mathf.Atan2 (shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
+		Debug.Log (rot_z);
 		transform.rotation = Quaternion.Euler (0f, 0f, rot_z);
-		GameObject.Find("ArmLeft").GetComponent<Transform>().rotation = Quaternion.Euler (0f, 0f, rot_z/8);
-		GameObject.Find("ArmRight").GetComponent<Transform>().rotation = Quaternion.Euler (0f, 0f, rot_z/8);
+		GameObject.Find ("ArmRight").transform.parent.FindChild("ArmRight").GetComponent<Transform>().rotation = Quaternion.Euler (0f, 0f, rot_z/8);//.GetComponent<Transform> ().rotation = Quaternion.Euler (0f, 0f, rot_z/8);
 		//Debug, 1-4 change ammo type
 		if (controller.DPadUp.IsPressed) {
 				typeOfShot = 0;		
@@ -78,7 +78,9 @@ public class Shootv2 : MonoBehaviour {
 					
 					shootDirection = shootDirection - transform.position;
 					shootDirection.Normalize ();
-					ShootBullet(speed*3,shootDirection,0f);
+
+                        ShootBullet(speed * 3, shootDirection, 0f);
+
 					fireRate = .8f;
 
 				}
@@ -190,8 +192,8 @@ void ShootBullet(float shotSpeed, Vector3 direction, float rotMod)
 			Invoke ("shootCD", fireRate);
 		}
 	}
-void shootCD()
-{
-	shootToggle = true;
-}
+    void shootCD()
+    {
+	    shootToggle = true;
+    }
 }

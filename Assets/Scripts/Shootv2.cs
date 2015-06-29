@@ -163,6 +163,7 @@ public class Shootv2 : MonoBehaviour {
 		Rigidbody2D bulletInstance = Instantiate (bullet, blastStart.position, transform.rotation) as Rigidbody2D;
 		bulletInstance.transform.eulerAngles = (new Vector3(0,0,rot_z+rotMod));
 		bulletInstance.AddRelativeForce (new Vector2(750*shotSpeed, 0));
+		GetComponentInParent<Rigidbody2D>().AddForce(new Vector2(75*-shotSpeed, 0));
 		if (typeOfShot == 3) {
 			int color = Random.Range (0,4);
 			if(color == 0)
@@ -191,6 +192,7 @@ public class Shootv2 : MonoBehaviour {
 		Rigidbody2D bulletInstance = Instantiate (bulletStraight, blastStart.position, transform.rotation) as Rigidbody2D;
 		bulletInstance.transform.eulerAngles = (new Vector3(0,0,rot_z));
 		bulletInstance.AddRelativeForce (new Vector2(750*shotSpeed, 0));
+		GetComponentInParent<Rigidbody2D>().AddForce(new Vector2(75*-shotSpeed, 0));
 		
 		
 		Physics2D.IgnoreCollision (transform.parent.GetComponent<Collider2D>(), bulletInstance.GetComponent<Collider2D>());
@@ -205,6 +207,7 @@ public class Shootv2 : MonoBehaviour {
 		Rigidbody2D bulletInstance = Instantiate (Cannon, transform.position, transform.rotation) as Rigidbody2D;
 		bulletInstance.transform.eulerAngles = (new Vector3(0,0,rot_z));
 		bulletInstance.AddRelativeForce (new Vector2(750*speed, 0));
+		GetComponentInParent<Rigidbody2D>().AddForce(new Vector2(75*-shotSpeed, 0));
 		
 		
 		Physics2D.IgnoreCollision (transform.parent.GetComponent<Collider2D>(), bulletInstance.GetComponent<Collider2D>());

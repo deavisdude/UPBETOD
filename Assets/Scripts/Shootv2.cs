@@ -13,7 +13,6 @@ public class Shootv2 : MonoBehaviour {
 	private float afireRate;
     public Transform blastStart;
 	public int typeOfShot;
-
 	public InputDevice controller;
 	
 
@@ -50,12 +49,38 @@ public class Shootv2 : MonoBehaviour {
 		//	Debug.Log (pointAt.name + (pointAt.transform.position.x));
 		//	Vector3 diff = pointAt.transform.position - transform.position;
 		//shootDirection.Normalize ();
-		
-		rot_z = Mathf.Atan2 (shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
-		Debug.Log (rot_z);
-		transform.rotation = Quaternion.Euler (0f, 0f, rot_z);
-		GameObject.Find ("ArmRight").transform.parent.FindChild("ArmRight").GetComponent<Transform>().rotation = Quaternion.Euler (0f, 0f, rot_z/8);//.GetComponent<Transform> ().rotation = Quaternion.Euler (0f, 0f, rot_z/8);
-		//Debug, 1-4 change ammo type
+
+        //RotationLimiter();
+        rot_z = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
+
+        if (rot_z > 45)
+        {
+            rot_z = 45f;
+        }
+        if (rot_z < -45)
+        {
+            rot_z = -45f;
+        }
+        if (shootDirection.y == 0 && shootDirection.x == 0)
+        {
+            rot_z = 0.0f;
+        }
+
+        transform.rotation = Quaternion.Euler(0f, 0f, rot_z); 
+        GameObject.Find ("ArmRight").transform.parent.FindChild("ArmRight").GetComponent<Transform>().rotation = Quaternion.Euler (0f, 0f, rot_z/8);
+       // RotationLimiter();
+        rot_z = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
+
+        if (rot_z > 45)
+        {
+            rot_z = 45f;
+        }
+        if (rot_z < -45)
+        {
+            rot_z = -45f;
+        }
+        Debug.Log(rot_z);
+        //Debug, 1-4 change ammo type
 		if (controller.DPadUp.IsPressed) {
 				typeOfShot = 0;		
 		}
@@ -132,7 +157,7 @@ public class Shootv2 : MonoBehaviour {
 		}
 		}
 
-void ShootBullet(float shotSpeed, Vector3 direction, float rotMod)
+    void ShootBullet(float shotSpeed, Vector3 direction, float rotMod)
 	{
 
 		Rigidbody2D bulletInstance = Instantiate (bullet, blastStart.position, transform.rotation) as Rigidbody2D;
@@ -195,5 +220,18 @@ void ShootBullet(float shotSpeed, Vector3 direction, float rotMod)
     void shootCD()
     {
 	    shootToggle = true;
+    }
+    void RotationLimiter()
+    {
+        rot_z = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
+
+        if (rot_z > 45)
+        {
+            rot_z = 45f;
+        }
+        if (rot_z < -45)
+        {
+            rot_z = -45f;
+        }
     }
 }
